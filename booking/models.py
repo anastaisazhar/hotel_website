@@ -17,7 +17,7 @@ class Room(models.Model):
     price = models.IntegerField(default=0)
 
     def __str__(self):
-        return f'Room {self.number}, {self.room_type}' 
+        return f'Room #{self.number}, size = {self.room_type}' 
 
 class Booking(models.Model):
     room = models.ForeignKey(Room,on_delete=models.CASCADE,related_name='all_bookings')

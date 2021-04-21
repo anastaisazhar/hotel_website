@@ -1,1 +1,11 @@
 <p>Hello world </p>
+
+{% if rooms_all %}
+    <ul>
+    {% for room in rooms_all %}
+        <li><a href="/booking/{{ room.number }}/">Room #{{ room.number }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>There are no rooms yet</p>
+{% endif %}
